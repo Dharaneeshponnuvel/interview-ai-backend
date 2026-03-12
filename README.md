@@ -1,87 +1,102 @@
 # AI Interview Platform – Backend
 
-This repository contains the **backend API** for the AI Interview Platform.
-It handles interview logic, AI interaction, and database management.
+This repository contains the **Golang backend API** for the AI Interview Platform.
+
+The backend handles interview logic, AI integration, and communication with the frontend.
+
+---
 
 ## 🚀 Features
 
-* AI-powered interview question generation
+* REST API built with Golang
+* AI-powered interview processing
 * Candidate answer evaluation
-* REST API for frontend communication
-* Secure environment configuration
-* Database integration
+* Secure API endpoints
+* JSON-based communication with frontend
+
+---
 
 ## 🛠️ Tech Stack
 
-* Node.js
-* Express.js
-* OpenAI / AI API
-* MongoDB / Database
-* dotenv
+* Golang
+* Gin / Fiber / net/http (depending on your framework)
+* REST API
+* JSON
+* Environment variables (.env)
+
+---
 
 ## 📂 Project Structure
 
 ```
 backend/
- ├── controllers
+ ├── handlers
  ├── routes
+ ├── services
  ├── models
- ├── config
- ├── server.js
- └── package.json
+ ├── main.go
+ └── go.mod
 ```
+
+---
 
 ## ⚙️ Installation
 
 Clone the repository
 
-```bash
+```
 git clone https://github.com/Dharaneeshponnuvel/interview-ai-backend.git
 ```
 
-Go to the project folder
+Move into the project folder
 
-```bash
+```
 cd interview-ai-backend
 ```
 
 Install dependencies
 
-```bash
-npm install
+```
+go mod tidy
 ```
 
 Run the server
 
-```bash
-npm start
+```
+go run main.go
 ```
 
-Server will run at
+The backend server will start at
 
 ```
-http://localhost:5000
+http://localhost:8080
 ```
+
+---
 
 ## 📌 Environment Variables
 
 Create a `.env` file
 
 ```
-PORT=5000
-OPENAI_API_KEY=your_api_key
-DB_URL=your_database_url
+PORT=8080
+AI_API_KEY=your_api_key
+DATABASE_URL=your_database_url
 ```
+
+---
 
 ## 🔗 Frontend Repository
 
-Frontend Application:
+Frontend React application:
 
 https://github.com/Dharaneeshponnuvel/interview-ai-frontend
+
+---
 
 ## 👨‍💻 Author
 
 **Dharaneesh P**
 
-GitHub
+GitHub:
 https://github.com/Dharaneeshponnuvel
